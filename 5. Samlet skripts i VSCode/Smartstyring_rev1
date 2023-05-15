@@ -1,0 +1,75 @@
+#%% Biblioteker
+
+import math
+import time
+import random
+import array
+
+
+#%% Connectionstring (via OPCUA til database)
+
+conString = ""
+
+#%% Variabler
+
+# Opprette tomme arrays for dagens og morgendagens strømpris
+timer = 24
+stromPrisArrayDagens = array.array('d', [0] * timer)
+stromPrisArrayiMorgen = array.array('d', [0] * timer)
+styringsProfilArray = array.array('d', [0] * timer)
+
+# Pådragssignal som er 0 eller 1
+u_off = 0
+u_on = 1
+u = 0
+
+# Metode som regner gjennomsnittspris iløpet av dagen
+def gjennomsnitt(arr):
+    total = 0
+    for i in arr:
+        total += i
+    return total/(timer)
+
+#%% fyll strømprisArray med verdier | her skal det jo egentlig være en connection til OPC tags som vi
+#   skriver til med strømpris API
+"""
+for i in range(timer):
+    # Random strømpris [øre/Kwh]
+    strompris = random.uniform(124, 137)
+    
+    # Legg tilfeldig strømpris inn i array
+    stromPrisArrayDagens[i] = strompris
+"""
+#%% Ekte verdier fra 23.02.2023
+
+
+stromPrisArrayDagens = array.array('d', [0] * timer)
+
+for i in range(timer):
+    stromPrisArrayDagens[i] = system.tag.readBlocking("DagensPriser")[0].value[i]
+    
+
+#%% Regn ut gjennomsnitt 
+
+gj = gjennomsnitt(stromPrisArrayDagens)
+
+#%"% løkke som skrur av og på pådragssignal
+
+for t in range (timer):
+    if stromPrisArrayDagens[t] < gj:
+        u = u_on
+        styringsProfilArray[t] = u
+    else:
+        pass
+
+#%% Lag en funksjon som du kan kalle på for å fylle i arrayet
+"""
+def StyringsProfil(array):
+    for t in range(array):
+        if strømPrisArrayDagens[t] < gj:
+            styringsProfilArray[t] = 1
+        else:
+            pass   
+"""
+
+system.tag.writeBlocking(["Pumpestyringsprofil"],[list(styringsProfilArray)])

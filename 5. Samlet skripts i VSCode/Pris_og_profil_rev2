@@ -1,0 +1,73 @@
+import urllib2
+import json
+import datetime as datetime
+import time
+import math
+import array
+from java.lang import Integer
+from javax.swing import JFrame
+from java.awt import Dimension
+from org.jfree.chart import ChartFactory
+from org.jfree.chart.plot import PlotOrientation
+from org.jfree.data.category import DefaultCategoryDataset
+from org.jfree.chart import ChartPanel
+from java.lang import Double
+
+
+class GetData:
+    def __init__(self):
+        self.dateToday = datetime.datetime.now().strftime("%Y/%m-%d")
+        self.dateTomorrow = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime("%Y/%m-%d")
+        self.url = "https://www.hvakosterstrommen.no/api/v1/prices/"
+        self.priceToday = []
+        self.priceTomorrow = []
+        self.timeToday = []
+        self.timeTomorrow = []
+
+    def RetrievePricesToday(self):
+        responseToday = urllib2.urlopen(self.url + self.dateToday + "_NO1.json").read()
+        responseInfoToday = json.loads(responseToday)
+
+        i = 0
+        for row in responseInfoToday:
+            self.priceToday.append(row["NOK_per_kWh"])
+            self.timeToday.append(i)
+            i += 1
+        system.tag.writeBlocking(["DagensPriser"], [self.priceToday])
+        #system.tag.writeBlocking(["DagensPriserDataset.Time"], [self.timeToday]) 
+           
+
+# Initialize classes
+gd = GetData()
+
+
+# Retrieve prices
+gd.RetrievePricesToday()
+#gd.RetrievePricesTomorrow()
+
+# Henter inn dagens strømpriser
+stromPrisArrayDagens = system.tag.read("DagensPriser").value
+
+#totalForbruk = 608.2 # m^3/h, fant dette ved å sette pådraget til pumpa til 0 og simulere et døgn
+totalForbruk = 722.87426 # m^3/h, np.sqrt(2.8)*C_v2*60*60*24
+
+# Leser pumpens maksimale strømning
+pumpeKapasitet = system.tag.read("PumpeMaksStromning").value
+pumpeQ_time = pumpeKapasitet
+
+# Finner antall timer som må kjøres for å motvirke forventet forbruk for døgnet
+antallTimer = totalForbruk / pumpeQ_time
+antallTimerAvrundet = int(math.ceil(antallTimer))
+
+# Finner hvilke timer i døgnet som er billigst
+laveste_pris = sorted(stromPrisArrayDagens)[:antallTimerAvrundet]
+laveste_pris_index = [stromPrisArrayDagens.index(val) for val in laveste_pris]
+
+# Danner døgnets styringsprofil
+styringsProfilArray = array.array('d', [0] * 24)
+
+for indexer in laveste_pris_index:
+    styringsProfilArray[indexer] = 1
+	
+# Passer arrayet til OPC
+system.tag.writeBlocking(["Pumpestyringsprofil"], [list(styringsProfilArray)])

@@ -1,0 +1,103 @@
+import urllib2
+import json
+import datetime
+import time
+from java.lang import Integer
+from javax.swing import JFrame
+from java.awt import Dimension
+from org.jfree.chart import ChartFactory
+from org.jfree.chart.plot import PlotOrientation
+from org.jfree.data.category import DefaultCategoryDataset
+from org.jfree.chart import ChartPanel
+from java.lang import Double
+
+
+class HentData:
+    def __init__(self):
+        self.datoIdag = datetime.datetime.now().strftime("%Y/%m-%d")
+        self.datoImorgen = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime("%Y/%m-%d")
+        self.url = "https://www.hvakosterstrommen.no/api/v1/prices/"
+        self.prisIdag = []
+        self.prisImorgen = []
+        self.tidIdag = []
+        self.tidImorgen = []
+
+    def HentPriserIdag(self):
+        responsIdag = urllib2.urlopen(self.url + self.datoIdag + "_NO1.json").read()
+        responsInfoIdag = json.loads(responsIdag)
+
+        i = 0
+        for row in responsInfoIdag:
+            self.prisIdag.append(row["NOK_per_kWh"])
+            self.tidIdag.append(i)
+            i += 1
+        system.tag.writeBlocking(["DagensPriser"], [self.prisIdag])
+          
+
+    def HentPriserImorgen(self):
+        while True:
+            try:
+                responsImorgen = urllib2.urlopen(self.url + self.datoImorgen + "_NO1.json").read()
+                responsInfoImorgen = json.loads(responsImorgen) 
+                break
+            except:
+                print("Morgendagens priser er ikke oppdatert")
+                print("Dagens priser: ", self.prisIdag)
+                system.tag.writeBlocking(["MorgendagensPriser"], [None]) 
+                time.sleep(10)  # sleep for 1 hour	
+        i = 0
+        for row in responsInfoImorgen:
+            self.prisImorgen.append(row["NOK_per_kWh"])
+            self.tidImorgen.append(i)
+            i += 1
+	    system.tag.writeBlocking(["MorgendagensPriser"], [self.prisImorgen])
+	    #system.tag.writeBlocking(["MorgendagensPriser.Time"], [self.timeTomorrow])       	 
+class Data:
+    def __init__(self):
+        self.prisIdag = []
+        self.prisImorgen = []
+
+    def HentData(self, gd):
+        self.prisIdag = gd.prisIdag
+        self.prisImorgen = gd.prisImorgen
+
+# Initsialiserer klassene
+gd = HentData()
+data = Data()
+
+# Mottar prisene
+gd.HentPriserIdag()
+gd.HentPriserImorgen()
+
+# Innhenter data
+data.HentData(gd)
+
+# Oppretter dataset
+dataset = DefaultCategoryDataset()
+for i in range(len(gd.tidIdag)):
+    dataset.addValue(gd.prisIdag[i], 'I dag', Integer(i))
+for i in range(len(gd.prisImorgen)):
+    dataset.addValue(gd.prisImorgen[i], 'I morgen', Integer(i))
+
+# Lager diagram
+chart = ChartFactory.createBarChart(
+    'Strompriser',
+    'Tid [Timer]',
+    'Pris [NOK]',
+    dataset,
+    PlotOrientation.VERTICAL,
+    True,
+    True,
+    False
+)
+chart_panel = ChartPanel(chart)
+
+
+# Opretter ramme på diagramet
+frame = JFrame('Strompriser')
+frame.setSize(Dimension(640, 480))
+frame.contentPane.add(chart_panel)
+frame.visible = True
+
+print("Dagens priser: ",gd.prisIdag)
+print("Morgendagens priser: ",gd.prisImorgen)
