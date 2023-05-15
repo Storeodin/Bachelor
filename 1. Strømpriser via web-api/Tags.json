@@ -1,0 +1,247 @@
+{
+  "tags": [
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/BassengHoyde",
+      "dataType": "Float4",
+      "name": "BassengHoyde",
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/BassengRadius",
+      "dataType": "Float4",
+      "name": "BassengRadius",
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/Besparelse",
+      "dataType": "Float4",
+      "name": "Besparelse",
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/DagensPriser",
+      "dataType": "Float4Array",
+      "name": "DagensPriser",
+      "value": [
+        1.16346,
+        1.12789,
+        1.11694,
+        1.11911,
+        1.1109,
+        1.12834,
+        1.19789,
+        1.54816,
+        1.71121,
+        1.37599,
+        1.17349,
+        1.13553,
+        1.05776,
+        0.98639,
+        0.93576,
+        0.91353,
+        0.92995,
+        1.04294,
+        1.11318,
+        1.13917,
+        1.15662,
+        1.15502,
+        1.14556,
+        1.09163
+      ],
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/DerivatVerdiPrimaer",
+      "dataType": "Float4",
+      "name": "DerivatVerdiPrimaer",
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/DerivatVerdiSekundaer",
+      "dataType": "Float4",
+      "name": "DerivatVerdiSekundaer",
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/FlowInn",
+      "dataType": "Float4",
+      "historyProvider": "Historian",
+      "name": "FlowInn",
+      "historyEnabled": true,
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/FlowUt",
+      "dataType": "Float4",
+      "historyProvider": "Historian",
+      "name": "FlowUt",
+      "historyEnabled": true,
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/IntegralVerdiPrimaer",
+      "dataType": "Float4",
+      "name": "IntegralVerdiPrimaer",
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/IntegralVerdiSekundaer",
+      "dataType": "Float4",
+      "name": "IntegralVerdiSekundaer",
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/ManueltPaadragPrimaer",
+      "dataType": "Float4",
+      "name": "ManueltPaadragPrimaer",
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/ManueltPaadragsekundaer",
+      "dataType": "Float4",
+      "name": "ManueltPaadragsekundaer",
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/Nivaa",
+      "dataType": "Float4Array",
+      "historyProvider": "",
+      "name": "Nivaa",
+      "historyEnabled": false,
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/Nivaats",
+      "dataType": "Float4",
+      "historyProvider": "Historian",
+      "name": "Nivaats",
+      "historyEnabled": true,
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/PrimaerRegulatorModus",
+      "dataType": "Boolean",
+      "name": "PrimaerRegulatorModus",
+      "value": true,
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/ProporsjonalVerdiPrimaer",
+      "dataType": "Float4",
+      "name": "ProporsjonalVerdiPrimaer",
+      "value": 0.5,
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/ProporsjonalVerdiSekundaer",
+      "dataType": "Float4",
+      "name": "ProporsjonalVerdiSekundaer",
+      "value": 121.2025,
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/PumpeEffekt",
+      "name": "PumpeEffekt",
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/PumpeMaksStromning",
+      "dataType": "Float4",
+      "name": "PumpeMaksStromning",
+      "value": 120.0,
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/PumpePaadrag",
+      "dataType": "Float4",
+      "historyProvider": "Historian",
+      "name": "PumpePaadrag",
+      "historyEnabled": true,
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/Pumpestyringsprofil",
+      "dataType": "Float4Array",
+      "name": "Pumpestyringsprofil",
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "memory",
+      "dataType": "Boolean",
+      "name": "SekundaerRegulatorModus",
+      "value": true,
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "memory",
+      "name": "Settpunkt",
+      "value": 50,
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/Speed",
+      "name": "SimSpeed",
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "memory",
+      "dataType": "Float4",
+      "name": "Speed",
+      "value": 2.0,
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/StartSim",
+      "dataType": "Boolean",
+      "name": "StartSim",
+      "value": false,
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    }
+  ]
+}
