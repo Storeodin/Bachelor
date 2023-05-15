@@ -2,17 +2,30 @@
 Energieffektiv styring av høydebasseng
 
 ## generell informasjon
+Bachelor oppgave for gruppe IA6-1-23
 
 ### 1. Strømpriser via web-api
-forklaring
+Dette skriptet henter dagens og morgendagens strømpriser
 
 ### 2. Prosessimulator
-forklaring
+Dette skriptet simulerer prosess
 
 ### 3. Smartstyring
-forklaring
+Dette skriptet danner styringsprofilen til pumpen som blir brukt i simulatoren
 
-### 4. relevant informasjon i dashbord
-forklaring
+### 4. Relevant informasjon i dashbord
+Grafisk brukergrensesnitt av systemet
 
 ## Kjøring / oppsett
+Følg vedlegg B (brukerveiledning) for installering av Ignition.
+
+For å kjøre systemet må man ha to PCer tilgjengelig.
+### Datamaskin 1 (Prosess)
+1. Åpne "Designer Launcher"
+2. Importer 2. Prosessimulator/SimTags.json
+
+### Datamaskin 2 (Kontrollsystem)
+2.  Åpne "Designer Launcher"
+3. Importer 4. Relevant informasjon i dashbord/StromeffektivHoydebasseng
+4. Importer 1. Strømpriser via web-api/Tags.json
+5. Følg brukerveiledning for en oversikt over funksjoner
