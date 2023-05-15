@@ -1,18 +1,161 @@
 {
+  "name": "",
+  "tagType": "Provider",
   "tags": [
     {
+      "valueSource": "memory",
+      "dataType": "Float4Array",
+      "name": "MorgendagensPriser",
+      "tagType": "AtomicTag"
+    },
+    {
       "valueSource": "opc",
-      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/BassengHoyde",
-      "dataType": "Float4",
-      "name": "BassengHoyde",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/PrimaerRegulatorModus",
+      "dataType": "Boolean",
+      "name": "PrimaerRegulatorModus",
+      "value": true,
       "tagType": "AtomicTag",
       "opcServer": "Prosess OPC UA Server"
     },
     {
       "valueSource": "opc",
-      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/BassengRadius",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/BesparelseProsent",
       "dataType": "Float4",
-      "name": "BassengRadius",
+      "name": "BesparelseProsent",
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/FlowUt",
+      "dataType": "Float4",
+      "historyProvider": "HistorianTags",
+      "name": "FlowUt",
+      "historyEnabled": true,
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/PumpeEffekt",
+      "name": "PumpeEffekt",
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/ProporsjonalVerdiPrimaer",
+      "dataType": "Float4",
+      "name": "ProporsjonalVerdiPrimaer",
+      "value": 0.5,
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/KaskadePris",
+      "dataType": "Float4",
+      "name": "KaskadePris",
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/SmartPris",
+      "dataType": "Float4",
+      "name": "SmartPris",
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/IntegralVerdiSekundaer",
+      "dataType": "Float4",
+      "name": "IntegralVerdiSekundaer",
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/Pumpestyringsprofil",
+      "dataType": "Float4Array",
+      "name": "Pumpestyringsprofil",
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/ManueltPaadragPrimaer",
+      "dataType": "Float4",
+      "name": "ManueltPaadragPrimaer",
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/ManueltPaadragsekundaer",
+      "dataType": "Float4",
+      "name": "ManueltPaadragSekundaer",
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/DerivatVerdiSekundaer",
+      "dataType": "Float4",
+      "name": "DerivatVerdiSekundaer",
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/Nivaa",
+      "dataType": "Float4Array",
+      "historyProvider": "",
+      "name": "Nivaa",
+      "historyEnabled": false,
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/FlowInn",
+      "dataType": "Float4",
+      "historyProvider": "HistorianTags",
+      "name": "FlowInn",
+      "historyEnabled": true,
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/Settpunkt",
+      "dataType": "Float4",
+      "historyProvider": "HistorianTags",
+      "name": "Settpunkt",
+      "historyEnabled": true,
+      "value": 50.0,
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "name": "_types_",
+      "tagType": "Folder"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/StartStrom",
+      "dataType": "Boolean",
+      "name": "StartStrom",
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/PumpeMaksStromning",
+      "dataType": "Float4",
+      "name": "PumpeMaksStromning",
+      "value": 120.0,
       "tagType": "AtomicTag",
       "opcServer": "Prosess OPC UA Server"
     },
@@ -21,6 +164,48 @@
       "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/Besparelse",
       "dataType": "Float4",
       "name": "Besparelse",
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/SekundaerRegulatorModus",
+      "dataType": "Boolean",
+      "name": "SekundaerRegulatorModus",
+      "value": false,
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/DerivatVerdiPrimaer",
+      "dataType": "Float4",
+      "name": "DerivatVerdiPrimaer",
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/PumpePaadrag",
+      "dataType": "Float4",
+      "historyProvider": "HistorianTags",
+      "name": "PumpePaadrag",
+      "historyEnabled": true,
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/Speed",
+      "name": "SimSpeed",
+      "tagType": "AtomicTag",
+      "opcServer": "Prosess OPC UA Server"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/BassengHoyde",
+      "dataType": "Float4",
+      "name": "BassengHoyde",
       "tagType": "AtomicTag",
       "opcServer": "Prosess OPC UA Server"
     },
@@ -59,40 +244,11 @@
       "opcServer": "Prosess OPC UA Server"
     },
     {
-      "valueSource": "opc",
-      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/DerivatVerdiPrimaer",
+      "valueSource": "memory",
       "dataType": "Float4",
-      "name": "DerivatVerdiPrimaer",
-      "tagType": "AtomicTag",
-      "opcServer": "Prosess OPC UA Server"
-    },
-    {
-      "valueSource": "opc",
-      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/DerivatVerdiSekundaer",
-      "dataType": "Float4",
-      "name": "DerivatVerdiSekundaer",
-      "tagType": "AtomicTag",
-      "opcServer": "Prosess OPC UA Server"
-    },
-    {
-      "valueSource": "opc",
-      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/FlowInn",
-      "dataType": "Float4",
-      "historyProvider": "Historian",
-      "name": "FlowInn",
-      "historyEnabled": true,
-      "tagType": "AtomicTag",
-      "opcServer": "Prosess OPC UA Server"
-    },
-    {
-      "valueSource": "opc",
-      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/FlowUt",
-      "dataType": "Float4",
-      "historyProvider": "Historian",
-      "name": "FlowUt",
-      "historyEnabled": true,
-      "tagType": "AtomicTag",
-      "opcServer": "Prosess OPC UA Server"
+      "name": "Speed",
+      "value": 2.0,
+      "tagType": "AtomicTag"
     },
     {
       "valueSource": "opc",
@@ -104,43 +260,9 @@
     },
     {
       "valueSource": "opc",
-      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/IntegralVerdiSekundaer",
-      "dataType": "Float4",
-      "name": "IntegralVerdiSekundaer",
-      "tagType": "AtomicTag",
-      "opcServer": "Prosess OPC UA Server"
-    },
-    {
-      "valueSource": "opc",
-      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/ManueltPaadragPrimaer",
-      "dataType": "Float4",
-      "name": "ManueltPaadragPrimaer",
-      "tagType": "AtomicTag",
-      "opcServer": "Prosess OPC UA Server"
-    },
-    {
-      "valueSource": "opc",
-      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/ManueltPaadragsekundaer",
-      "dataType": "Float4",
-      "name": "ManueltPaadragsekundaer",
-      "tagType": "AtomicTag",
-      "opcServer": "Prosess OPC UA Server"
-    },
-    {
-      "valueSource": "opc",
-      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/Nivaa",
-      "dataType": "Float4Array",
-      "historyProvider": "",
-      "name": "Nivaa",
-      "historyEnabled": false,
-      "tagType": "AtomicTag",
-      "opcServer": "Prosess OPC UA Server"
-    },
-    {
-      "valueSource": "opc",
       "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/Nivaats",
       "dataType": "Float4",
-      "historyProvider": "Historian",
+      "historyProvider": "HistorianTags",
       "name": "Nivaats",
       "historyEnabled": true,
       "tagType": "AtomicTag",
@@ -148,19 +270,9 @@
     },
     {
       "valueSource": "opc",
-      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/PrimaerRegulatorModus",
-      "dataType": "Boolean",
-      "name": "PrimaerRegulatorModus",
-      "value": true,
-      "tagType": "AtomicTag",
-      "opcServer": "Prosess OPC UA Server"
-    },
-    {
-      "valueSource": "opc",
-      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/ProporsjonalVerdiPrimaer",
+      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/BassengRadius",
       "dataType": "Float4",
-      "name": "ProporsjonalVerdiPrimaer",
-      "value": 0.5,
+      "name": "BassengRadius",
       "tagType": "AtomicTag",
       "opcServer": "Prosess OPC UA Server"
     },
@@ -174,64 +286,16 @@
       "opcServer": "Prosess OPC UA Server"
     },
     {
-      "valueSource": "opc",
-      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/PumpeEffekt",
-      "name": "PumpeEffekt",
-      "tagType": "AtomicTag",
-      "opcServer": "Prosess OPC UA Server"
-    },
-    {
-      "valueSource": "opc",
-      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/PumpeMaksStromning",
-      "dataType": "Float4",
-      "name": "PumpeMaksStromning",
-      "value": 120.0,
-      "tagType": "AtomicTag",
-      "opcServer": "Prosess OPC UA Server"
-    },
-    {
-      "valueSource": "opc",
-      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/PumpePaadrag",
-      "dataType": "Float4",
-      "historyProvider": "Historian",
-      "name": "PumpePaadrag",
-      "historyEnabled": true,
-      "tagType": "AtomicTag",
-      "opcServer": "Prosess OPC UA Server"
-    },
-    {
-      "valueSource": "opc",
-      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/Pumpestyringsprofil",
-      "dataType": "Float4Array",
-      "name": "Pumpestyringsprofil",
-      "tagType": "AtomicTag",
-      "opcServer": "Prosess OPC UA Server"
-    },
-    {
       "valueSource": "memory",
+      "eventScripts": [
+        {
+          "eventid": "valueChanged",
+          "script": "\twhile system.tag.read(\"PrisOgProfil\").value \u003d\u003d True:\n\t\timport urllib2\n\t\timport json\n\t\timport datetime as datetime\n\t\timport time\n\t\timport math\n\t\timport array\n\t\tfrom java.lang import Integer\n\t\tfrom javax.swing import JFrame\n\t\tfrom java.awt import Dimension\n\t\tfrom org.jfree.chart import ChartFactory\n\t\tfrom org.jfree.chart.plot import PlotOrientation\n\t\tfrom org.jfree.data.category import DefaultCategoryDataset\n\t\tfrom org.jfree.chart import ChartPanel\n\t\tfrom java.lang import Double\n\t\t\n\t\t\n\t\tclass GetData:\n\t\t    def __init__(self):\n\t\t        self.dateToday \u003d datetime.datetime.now().strftime(\"%Y/%m-%d\")\n\t\t        self.dateTomorrow \u003d (datetime.datetime.now() + datetime.timedelta(days\u003d1)).strftime(\"%Y/%m-%d\")\n\t\t        self.url \u003d \"https://www.hvakosterstrommen.no/api/v1/prices/\"\n\t\t        self.priceToday \u003d []\n\t\t        self.priceTomorrow \u003d []\n\t\t        self.timeToday \u003d []\n\t\t        self.timeTomorrow \u003d []\n\t\t\n\t\t    def RetrievePricesToday(self):\n\t\t        responseToday \u003d urllib2.urlopen(self.url + self.dateToday + \"_NO1.json\").read()\n\t\t        responseInfoToday \u003d json.loads(responseToday)\n\t\t\n\t\t        i \u003d 0\n\t\t        for row in responseInfoToday:\n\t\t            self.priceToday.append(row[\"NOK_per_kWh\"])\n\t\t            self.timeToday.append(i)\n\t\t            i +\u003d 1\n\t\t        system.tag.writeBlocking([\"DagensPriser\"], [self.priceToday])\n\t\t        #system.tag.writeBlocking([\"DagensPriserDataset.Time\"], [self.timeToday]) \n\t\t           \n\t\t\n\t\t# Initialize classes\n\t\tgd \u003d GetData()\n\t\t\n\t\t\n\t\t# Retrieve prices\n\t\tgd.RetrievePricesToday()\n\t\t#gd.RetrievePricesTomorrow()\n\t\t\n\t\t# Henter inn dagens strømpriser\n\t\tstromPrisArrayDagens \u003d system.tag.read(\"DagensPriser\").value\n\t\t\n\t\t#totalForbruk \u003d 608.2 # m^3/h, fant dette ved å sette pådraget til pumpa til 0 og simulere et døgn\n\t\ttotalForbruk \u003d 722.87426 # m^3/h, np.sqrt(2.8)*C_v2*60*60*24\n\t\t\n\t\t# Leser pumpens maksimale strømning\n\t\tpumpeKapasitet \u003d system.tag.read(\"PumpeMaksStromning\").value\n\t\tpumpeQ_time \u003d pumpeKapasitet\n\t\t\n\t\t# Finner antall timer som må kjøres for å motvirke forventet forbruk for døgnet\n\t\tantallTimer \u003d totalForbruk / pumpeQ_time\n\t\tantallTimerAvrundet \u003d int(math.ceil(antallTimer))\n\t\t\n\t\t# Finner hvilke timer i døgnet som er billigst\n\t\tlaveste_pris \u003d sorted(stromPrisArrayDagens)[:antallTimerAvrundet]\n\t\tlaveste_pris_index \u003d [stromPrisArrayDagens.index(val) for val in laveste_pris]\n\t\t\n\t\t# Danner døgnets styringsprofil\n\t\tstyringsProfilArray \u003d array.array(\u0027d\u0027, [0] * 24)\n\t\t\n\t\tfor indexer in laveste_pris_index:\n\t\t    styringsProfilArray[indexer] \u003d 1\n\t\t\t\n\t\t# Passer arrayet til OPC\n\t\tsystem.tag.writeBlocking([\"Pumpestyringsprofil\"], [list(styringsProfilArray)])"
+        }
+      ],
       "dataType": "Boolean",
-      "name": "SekundaerRegulatorModus",
+      "name": "PrisOgProfil",
       "value": true,
-      "tagType": "AtomicTag"
-    },
-    {
-      "valueSource": "memory",
-      "name": "Settpunkt",
-      "value": 50,
-      "tagType": "AtomicTag"
-    },
-    {
-      "valueSource": "opc",
-      "opcItemPath": "nsu\u003durn:inductiveautomation:ignition:opcua:tags;s\u003d[default]/Speed",
-      "name": "SimSpeed",
-      "tagType": "AtomicTag",
-      "opcServer": "Prosess OPC UA Server"
-    },
-    {
-      "valueSource": "memory",
-      "dataType": "Float4",
-      "name": "Speed",
-      "value": 2.0,
       "tagType": "AtomicTag"
     },
     {
