@@ -16,10 +16,13 @@ Dette skriptet danner styringsprofilen til pumpen som blir brukt i simulatoren
 ### 4. Relevant informasjon i dashbord
 Grafisk brukergrensesnitt av systemet
 
-## Kjøring / oppsett
-Følg vedlegg B (brukerveiledning) for installering av Ignition.
+## Lesing av kode uten funksjonstesting
+Se mappe 5 for kode uten funksjon, bruk VSCode eller liknende.
 
+## Kjøring / Oppsett
+Følg vedlegg B (brukerveiledning) for installering av Ignition.
 For å kjøre systemet må man ha to PCer tilgjengelig.
+
 ### Datamaskin 1 (Prosess)
 1. Åpne "Designer Launcher"
 2. Importer 2. Prosessimulator/SimTags.json
